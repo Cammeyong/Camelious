@@ -1,0 +1,30 @@
+
+<section class="partners">
+    <div class="container">
+        <h1>Our Partners</h1>
+        
+        <div *ngIf="partnersBrand && partnersBrand.length > 0" class="partners-container">
+            <img *ngFor="let image of partnersBrand let i=index"
+            img [src]="image.partnersImageSrc" [alt]="image.partnersImageAlt" class="partnersImages fade" [ngClass]="{'image-active': selectedIndex === i}">
+        </div>
+
+        <!-- <button *ngIf="controls" class="btn-slider btn-previous" (click)="onPreviousClick()">
+        <i class="fas fa-arrow-circle-left icon-slider icon-previous" ></i>
+        </button>
+        <button *ngIf="controls" class="btn-slider btn-next" (click)="onNextClick()">
+            <i class="fas fa-arrow-circle-right icon-slider icon-next"></i>
+        </button> -->
+
+
+        <button type="button" appPrevious class="btn-slider previous-btn">
+            <i class="fas fa-arrow-circle-left icon-slider icon-previous" ></i>
+        </button>
+        
+        <button type="button" appNext class="btn-slider next-btn">
+            <i class="fas fa-arrow-circle-right icon-slider icon-next"></i>
+        </button>
+    
+        
+    </div> 
+    
+</section>

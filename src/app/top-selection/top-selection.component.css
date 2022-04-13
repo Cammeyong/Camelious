@@ -1,0 +1,219 @@
+h1 {
+    text-align: center;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    margin-top: 4%;
+    font-size: 64px;
+    border: 8px solid rgb(112, 5, 5);
+    padding: 5% 0;
+    background-image: url(https://cdn.wallpapersafari.com/75/93/MZnEAz.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: red;
+
+}
+
+h1 span {
+    backdrop-filter: blur(1px);
+    background:  rgb(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgba(255,255,255,0.2);
+    padding: 0 10px;
+}
+
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(112, 5, 5);
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    margin: 5% 0;
+    padding: 10px;
+    border-bottom: 5px solid rgb(112, 5, 5);
+    
+}
+
+.topSelections {
+    margin: 10% 0;
+    width: 100%;
+}
+
+.box {
+    width: 100%;
+    min-height: 100vh;
+    border-bottom: 10px solid rgb(112, 5, 5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.filter {
+    width: 100%;
+    min-height: 100vh;
+    border-bottom: 10px solid rgb(112, 5, 5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(1.5px);
+}
+
+.topImagesContainer {
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+    margin: 20px 0px;
+    /* border: 2px solid green; */
+    width: 100%;
+
+}
+img{
+    width: 300px;
+    height: 300px;
+    border: 5px solid rgb(112, 5, 5);
+
+}
+
+.box button {
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 10px 15px;
+    color: white;
+    background-color: rgb(112, 5, 5);
+    font-size: 25px;
+    /* font-weight: bold; */
+    border: none;
+    border-radius: 5px;
+    transition: all ease-in-out 1s;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.box button:hover {
+    transform: translateY(-10px);
+    background: #000;
+    color: #fff;
+    /* border: 2px solid red; */
+}
+
+.bg1 {
+    background: url("https://c8.alamy.com/comp/WENA33/red-and-white-rose-petals-fall-to-the-floor-isolated-white-background-WENA33.jpg");
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+}
+
+.bg2 {
+    background: url("http://phpography.com/images/rose-petals-wallpaper-2.jpg");
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+}
+.appear2 {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+.appear2.inview2 {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .appear2.inview2:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  
+  .appear2.inview2:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .appear2.inview2:nth-child(3) {
+     transition-delay: 0.3s;
+  }
+  
+  .appear2.inview2:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+.bounce2 {
+    animation-name: hovering;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 100;
+    /* animation-delay: 0.5s; */
+  }
+  
+  @keyframes hovering {
+    0% {
+        margin-top: -2%;
+    }
+    50% {
+        margin-top: 0%;
+    }
+    100% {
+        margin-top: -2%;
+    }
+}
+.fadeInLeft {
+    animation-name: fade;
+    animation-duration: 7s;
+    /* animation-delay: 0.5s; 
+    } */
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.3;
+        margin-left: -50%;
+    }
+    40% {
+    opacity: 0.5;
+    margin-left: 200px;
+    }
+
+    80% {
+        opacity: 0.7;
+        margin-left: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 80px;
+    }
+}
+.fadeInRight {
+    animation-name: fade;
+    animation-duration: 7s;
+    /* animation-delay: 0.5s; 
+    } */
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.3;
+        margin-right: -50%;
+    }
+    40% {
+    opacity: 0.5;
+    margin-right: 200px;
+    }
+
+    80% {
+        opacity: 0.7;
+        margin-right: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-right: 80px;
+    }
+}

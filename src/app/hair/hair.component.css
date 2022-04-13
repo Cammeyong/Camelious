@@ -1,0 +1,184 @@
+h1 {
+    margin: 5% 0;
+    font-family: Nanum Myeongjo, serif;
+    font-weight: 700;
+    color: rgb(187, 5, 5);
+    font-size: 48px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.product {
+    width: 100%;
+    height: 80vh;
+}
+.container {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+}
+.sliderImageContainer {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+    
+.item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.item img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.btn-slider {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    display: flex;
+    width: 10%;
+    height: 70%;
+    color: rgb(243, 20, 20);
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+}
+.btn-slider i {
+    font-size: 30px;
+}
+.previous-btn {
+    left: 10;
+}
+
+.next-btn {
+    right: 0;
+}
+.searchContainer {
+    display: flex;
+    width: 100%; 
+    flex-direction: row;
+    border-bottom: 10px solid rgba(112,5,5);
+}
+
+.search {
+    margin:2% 0 5% 10%;
+    flex: 50%;
+    justify-content: center;
+    
+}
+label {
+    color: red;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 26px;
+}
+.search input {
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 5px;
+    width: 50%;
+}
+.search button {
+    border-radius: 50%;
+    transform: translate(-40px, 5px);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.search button i {
+    font-size: 20px;
+}
+.sort select{
+    padding: 8px;
+    margin-left: 3px;
+    border-radius: 5px;
+}
+.necklaceImageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5% 10%;
+    width: 80%;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+.necklaceImages {
+    margin-right: 2%;
+    margin-bottom: 5%;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    border:1px solid rgba(255,255,255,0.5);
+    transition: all 0.7s ease-in-out;
+}
+.necklaceImages:hover {
+    border-radius: 20px;
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 10px 0px rgba(112, 4, 4, 0.5);
+}
+.necklaceImages img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    border-bottom: 2px solid rgba(112,5,5);
+    border-top: 2px solid rgba(112,5,5);
+}
+.necklaceImages:hover {
+    border-radius: 20px;
+}
+.necklaceImages .titles {
+    font-size: 16px;
+    font-weight: 550;
+    font-style: oblique;
+}
+.necklaceImages .prices {
+    font-size: 14px;
+    font-weight: 550;
+    font-style: oblique;
+}
+
+p {
+    text-align: center;
+    width: 300px;
+    padding: 10px 5px;
+}
+.necklaceImageContainer button {
+    width: 45%;
+    border-radius: 20px;
+    padding-left: 20%;
+    margin: 20px 90px;
+    background-color: rgb(187, 5, 5);
+    color: rgb(255, 255, 255, 0.8);
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.5s ease-in;
+}
+.necklaceImageContainer button:hover {
+    transform: scale(0.95);
+}
+.hair {
+    background: url("https://cdn.wallpapersafari.com/22/80/q0SGat.jpg");
+    background-position: center;
+    /* background-position-x: right; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.hair .filter {
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    /* padding: 5% 0; */
+}

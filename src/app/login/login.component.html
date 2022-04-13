@@ -1,0 +1,57 @@
+
+<div class="container">
+
+    <div class="sub-container">
+
+        <div class="crown">
+
+        </div>   
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+            <h1>Welcome Queen</h1>
+
+            <div class="form-group">
+                
+                <div class="nameContainer">
+                    <label for="username">Username <span>*</span></label>
+                    <input type="text" class="form-control" formControlName="userName" name="userName" required > 
+                    <div class="left">
+                        <span *ngIf="loginForm.get('userName')?.errors?.['required'] && loginForm.get('userName')?.touched" class="errorMessage">Please Provide your Username </span>
+                        <span *ngIf="loginForm.get('userName')?.errors?.['minlength']">First name must have at least 3 characters. </span>
+                    </div>
+                
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+            <label for="password">Password <span>*</span></label>
+            <input type="password" class="form-control" formControlName="password" name="password" required >
+            <br>
+
+            <span *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="errorMessage">Please to provide your password</span>
+            </div>
+            <br>
+
+            <button>Login</button>
+
+            <div class="forget">
+                <p>Not a member? <a routerLink="register">Register</a></p>
+
+                <p><a href="#">Forget password?</a></p>
+            </div>
+
+            <div class="icons">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google"></i></a></li>
+                    <li><a href="#"><i class="fab fa-yahoo"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+
+                <p style="text-align: center; padding-bottom: 1%;">Login using a different account</p>
+            </div>
+        </form>
+    </div>
+</div>

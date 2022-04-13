@@ -1,0 +1,151 @@
+.sales-banner {
+    border-top: 10px solid rgb(112,5,5);
+}
+
+.sales-banner .row-banner {
+    width: 90%;
+    display: flex;
+    margin: 5% 5%;
+}
+.sales-banner .col-banner {
+    flex:30%;
+    border: none;
+    text-align: center;
+    padding: 5% 0;
+    margin: 0 2%;
+    box-shadow: 2px 6px 7px rgb(0, 0, 0, 0.4);
+    transition: all 0.8s ease-in-out;
+}
+.sales-banner .col-banner:hover {
+    transform: scale(1.15);
+}
+
+footer {
+    /* min-height: 40vh ; */
+    width: 100%;
+    background-image: url(https://cdn.wallpapersafari.com/34/84/PF8ySW.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: black;
+    height: 60%;
+}
+
+footer p {
+    text-align: center;
+    color: red;
+    background-color: black;
+    padding: 1% 0;
+    
+}
+
+.row {
+    display: flex;
+    width: 90%;
+    /* justify-content: center; */
+    margin-left: 5%;
+    height: 100%;
+    backdrop-filter: blur(2.5px);
+    background: rgb(0,0,0, 0.3);
+}
+.col {
+    flex: 25%;
+    padding: 2%;
+}
+h3 {
+    font-family: Nanum Myeongjo, serif;
+    font-size: 28px;
+    color: red;
+    margin-bottom: 15%;
+    font-weight: 800;
+}
+.social-icons a {
+    color: red;
+    text-decoration: none;
+    font-size: 26px;
+    padding-right: 5%;
+    margin-top: 25%;
+}
+.subscribe p {
+color: red;
+margin-bottom: 10%;
+background-color: transparent;
+text-align: left;
+font-size: 20px;
+font-weight: bolder;
+}
+input {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+footer button {
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: red;
+    border: none;
+    transition: 1s ease;
+    cursor: pointer;
+}
+footer button:hover {
+    transform:translateX(50px);
+}
+
+footer .nav i {
+    margin-right: 3%
+}
+footer .nav a{
+    text-decoration: none;
+    color: red;   
+    transition: all 1s ease;
+    
+}
+footer .nav a:hover {
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    padding: 6px;
+}
+footer .row-second {
+    display: flex;
+    width: 100%;
+    margin-top: 14% ;
+}
+footer .row-second .col2 {
+    flex: 50%;
+    padding: 3% 5px;
+}
+footer ul {
+    list-style: none;
+}
+footer ul li {
+    margin-bottom: 15%;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.logo {
+    height: 60px;
+    position: absolute;
+    width: 50px;
+    margin-right: 2%;
+    margin: 3% 0;
+    padding-left: 5%;
+    color: red;
+}
+.logo img {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    padding-left: 12px;
+}
+.logo h1 {
+    font-family: dancing script, cursive;
+    text-transform: uppercase;
+    font-size: 48px;
+    height: 10px;
+    transform: translateY(-15px);
+    /* position: absolute; */
+}

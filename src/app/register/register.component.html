@@ -1,0 +1,55 @@
+<div class="registrationForm">
+
+  <div class="container">
+
+    <div class="registerImage"></div>
+      
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <h1>Register a new Account</h1>
+
+      <div class="form-group">
+        <!-- <label for="firstName">First Name:</label> -->
+        <input type="text" class="form-control" formControlName="firstName" placeholder="Please Provide Name" required >
+        <br>
+        <span *ngIf="registerForm.get('firstName')?.errors?.['required'] && registerForm.get('firstName')?.touched">Please Provide Name </span>
+        <span *ngIf="registerForm.get('firstName')?.errors?.['minlength']">Name must have at least 3 characters. </span>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="userName">User Name :</label> -->
+        <input type="text" class="form-control" formControlName="userName" placeholder="Please Provide Username" required >
+        <br>
+        <span *ngIf="registerForm.get('userName')?.errors?.['required'] && registerForm.get('userName')?.touched">Please Provide user Name</span>
+        <span *ngIf="registerForm.get('userName')?.errors?.['maxlength']">User Name must be less than 16 characters. </span>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="email">Email:</label> -->
+        <input type="text" class="form-control" formControlName="email" placeholder="Email Address" required >
+        <br>
+        <span *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched">Email is Required </span>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="password">Password:</label> -->
+        <input type="password" placeholder="Password" class="form-control" formControlName="password" required >
+        <br>
+        <span *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched">Please Provide Password</span>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="passwordConfirmed">Confirm password:</label> -->
+        <input type="passwordConfirmed" placeholder="Confirm password" class="form-control" formControlName="passwordConfirmed" required >
+        <br>
+        <span *ngIf="registerForm.get('passwordConfirmed')?.errors && registerForm.get('passwordConfirmed')?.touched">Please Confirm Password</span>
+      </div>
+
+      <p>Already have an account? <a routerLink="login">Login</a></p>
+      <button class="btns" type="submit">Submit</button>
+      
+
+    </form>
+  </div>
+  
+</div>

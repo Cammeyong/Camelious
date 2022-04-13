@@ -1,0 +1,91 @@
+
+<section class="topSelections">
+    
+    <div class="topSelectionsContainer">
+       
+        <h1><span>top selections</span></h1>
+
+        <div class="box bg1">
+            <div class="filter">
+        <h2>Make Up</h2>
+
+
+        <div class="topImagesContainer appear2">
+
+            <div class="topImages" *ngFor="let image of makeupImages">
+                <img 
+                img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+            
+            </div>
+
+        </div>
+        <button>Click For More</button>
+        </div>
+        </div>
+
+        <div class="box bg2">
+            <div class="filter">
+
+            <h2>Jewelry</h2>
+    
+    
+            <div [@home]="stateName" class="topImagesContainer bounce2 appear2">
+    
+                <div class="topImages" *ngFor="let image of jewelryImages">
+                    <img 
+                    img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+                
+                </div>
+    
+            </div>
+            <button>Click For More</button>
+            </div>
+            </div>
+    
+            <div class="box bg1">
+                <div class="filter">
+                <h2 class="">Hair</h2>
+        
+        
+                <div class="topImagesContainer fadeInLeft appear2">
+        
+                    <div class="topImages" *ngFor="let image of hairImages">
+                        <img 
+                        img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+                    
+                    </div>
+        
+                </div>
+
+                <button>Click For More</button>
+
+            </div>
+                </div>
+
+        <!-- <h2>Jewelry</h2>
+
+        <div class="topImagesContainer">
+
+            <div class="topImages" *ngFor="let image of jewelryImages">
+                <img 
+                img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+                
+
+            </div>
+
+        </div> -->
+
+        <!-- <h2>hair</h2>
+        
+        <div class="topImagesContainer">
+
+            <div class="topImages" *ngFor="let image of hairImages">
+                <img 
+            img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+            
+            </div>
+
+        </div> -->
+    </div>
+    
+</section>

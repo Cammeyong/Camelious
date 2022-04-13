@@ -1,0 +1,68 @@
+<ng-container *ngIf="products.length != 0">
+
+    <div class="container">
+      <div class="cart-table">
+        <div class="cart-product">
+
+         <h1>My Cart</h1>
+
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Product Name</th>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of products; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{item.name}}</td>
+                <td><img style="width: 120px;" src="{{item.imageSrc}}" alt=""> </td>
+                <td style="width:25%"></td>
+                <td style="width:12%">{{item.price |currency}}</td>
+                <td style="width:12%">{{item.quantity}}</td>
+                <td style="width:12%; border-bottom:2px solid black">{{item.total |currency}}</td>
+                <td>
+                    <button (click)="removeItem(item)" class="btn btn-danger"> Delete <i class="fas fa-trash-alt"></i></button>
+                </td>
+              </tr>
+              <tr>
+                  <td colspan="4"></td>
+                  <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                  <td><button routerLink="/Store" class="btn btn-primary">Shop More</button></td>
+                  <td><button class="btn btn-success">Checkout</button></td>
+                  <td style="font-size: 20px;"><strong> Total:{{grandTotal |currency}}</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+  </ng-container>
+  
+  <ng-container *ngIf="products.length == 0">
+  
+    <div class="container">
+      <div class="card">
+        <h2 class="card-title">My Cart</h2>
+      </div>
+  
+      <div class="center">
+        <img src="https://media.istockphoto.com/vectors/simple-gift-box-icon-single-color-design-element-isolated-on-white-vector-id912149768?k=6&m=912149768&s=612x612&w=0&h=KAZv4LKegJjY5MxLVT6b9z4WiaMdYtGwzPMk8w-pS_w=" alt="">
+        <h4> Your Cart is Empty </h4>
+        <h6>Add An Item Now </h6>
+        <button class="btn btn-primary">Shop Now</button>
+      </div>
+    </div>
+
+  
+  
+  
+</ng-container>

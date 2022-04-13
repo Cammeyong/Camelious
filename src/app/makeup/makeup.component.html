@@ -1,0 +1,98 @@
+
+<section class="product">
+    <div class="container">
+        <div class="sliderImageContainer">
+            
+            <div class="item">
+                <img src="https://wallpaperaccess.com/full/695815.jpg" alt=""  >
+            </div>
+
+            <div class="item" >
+                <img src="https://cdn.shopify.com/s/files/1/0373/4889/collections/marbleous-hero-image_6233a2ca-b82e-4460-88e7-14af879101f9_1400x.jpg?v=1610456106" alt="" >
+            </div>
+        
+            <div class="item">
+                <img src="https://miacosmetics.it/wp-content/uploads/2021/12/HOMEPAGE_BANNER_MAKEUP-1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="hhttps://makemeupmarie.files.wordpress.com/2015/12/untitled.png" alt="">
+            </div>
+            <div class="item">
+                <img src="https://wallpaperaccess.com/full/1191088.jpg" alt="">
+            </div>
+
+            <div class="item">
+                <img src="https://wallpaperaccess.com/full/6154560.jpg" alt=""  >
+            </div>
+
+        </div>
+
+        <button type="button" appPrevious class="btn-slider previous-btn">
+            <i class="fas fa-arrow-circle-left icon-slider icon-previous" ></i>
+        </button>
+        
+        <button type="button" appNext class="btn-slider next-btn">
+            <i class="fas fa-arrow-circle-right icon-slider icon-next"></i>
+        </button>
+    
+        
+    </div> 
+    
+</section>
+
+<h1>makeup collections</h1>
+
+<div class="searchContainer">
+    <div class="search">
+        <label>Filter By:
+            <input type="text" name="search" id="search" [(ngModel)]="searchTerm" (keyup)="search($event)">
+        </label>
+        <button type="button"><i class="fas fa-search" ></i></button>
+        <!-- (click)="onNameFilter()" -->
+    </div>
+    
+    <div class="search sort">
+        <label for="">Sort By:</label>
+        <select name="" id="" >
+            <option value="">Sort By</option>
+            <option value="">Newest</option>
+            <option value="">Price (Low to High)</option>
+            <option value="">Price (High to Low)</option>
+            <option value="">Name (A to Z</option>
+            <option value="">Name (Z to A)</option>
+        </select>
+    </div>
+</div>
+
+<div class="makeup">
+    <div class="filter">
+
+        <div class="necklaceImageContainer">
+
+            <div class="necklaceImages" *ngFor="let image of makeUpImages | filter:searchKey:'name'; let i = index">
+                <img 
+                img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+                <p class="titles">{{image.name}}</p>
+                <p class="prices">{{image.price |currency}}</p>
+
+                <button type="button" (click)="addtocart(image)">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="necklaceImageContainer">
+
+            <div class="necklaceImages" *ngFor="let image of lipStickImages | filter:searchKey:'name'; let i = index">
+                <img 
+                img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+                <p class="titles">{{image.name}}</p>
+                <p class="prices">{{image.price |currency}}</p>
+
+                <button type="button" (click)="addtocart(image)">Add to Cart</button>
+
+            </div>
+
+        </div>
+    </div>
+</div>

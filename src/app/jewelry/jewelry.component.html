@@ -1,0 +1,114 @@
+<!-- <h1>Jewelry</h1> -->
+
+<section class="product">
+    <div class="container">
+        <div class="sliderImageContainer">
+            
+            <div class="item">
+                <img src="https://i.pinimg.com/originals/03/39/25/033925c2870b17e78899a2233401dd17.jpg" alt=""  >
+            </div>
+
+            <div class="item" >
+                <img src="https://i.pinimg.com/originals/c0/97/f9/c097f953e71b1d5ca3eeb54e481be540.png" alt="" >
+            </div>
+        
+            <div class="item">
+                <img src="https://i.pinimg.com/originals/a3/64/84/a36484b245e4188aaf3d6b48a16c5dac.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1610732981-bychariAshliNecklace_3086x.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://jewelry-static-files.s3.amazonaws.com/theringaustin/banner-image-40-1589556806.png" alt="">
+            </div>
+
+        </div>
+
+        <button type="button" appPrevious class="btn-slider previous-btn">
+            <i class="fas fa-arrow-circle-left icon-slider icon-previous" ></i>
+        </button>
+        
+        <button type="button" appNext class="btn-slider next-btn">
+            <i class="fas fa-arrow-circle-right icon-slider icon-next"></i>
+        </button>
+    
+        
+    </div> 
+    
+</section>
+
+
+
+<!-- <h1>RINGS</h1>
+
+<h3>Wedding Rings</h3>  -->
+    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMmgVFNzgnba53vHBg6akdHxgYo3RvB_bBA&usqp=CAU" alt="">
+
+    <img src="https://bnsec.bluenile.com/bluenile/is/image/bluenile/4a_WSP_MeetYourMatch_2up_2880x3600_Tall?hei=3600&wid=2880" alt="">
+
+    <img src="https://4cs.gia.edu/wp-content/uploads/2020/04/162199_690x460.jpg" alt="">
+
+    <img src="https://www.verragio.com/news/wp-content/uploads/2021/08/diamond-studded-gold-ring-set-circle-cut-diamond-960x400.jpg" alt=""> -->
+
+
+    <!-- <h1>BRACELET</h1> -->
+    <h1>NECKLACE</h1>
+
+<div class="searchContainer">
+    <div class="search">
+        <label>Filter By:
+            <input type="text" name="search" id="search" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+        </label>
+        <button type="button"><i class="fas fa-search" ></i></button>
+        <!-- <button type="button" (click)="onNameFilter()"><i class="fas fa-search" ></i></button> -->
+    </div>
+    
+    <div class="search sort">
+        <label for="">Sort By:</label>
+        <select name="" id="" >
+            <option value="">Sort By</option>
+            <option value="">Newest</option>
+            <option value="">Price (Low to High)</option>
+            <option value="">Price (High to Low)</option>
+            <option value="">Name (A to Z</option>
+            <option value="">Name (Z to A)</option>
+        </select>
+    </div>
+</div>
+
+
+
+<div class="jewelry">
+    <div class="filter">
+
+        <div class="necklaceImageContainer">
+
+            <div class="necklaceImages" *ngFor="let image of necklaceImages | filter:searchKey:'name'; let i = index">
+                <img 
+                img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+                <p class="titles">{{image.name}}</p>
+                <p>{{image.price |currency}}</p>
+        
+                <button type="button" (click)="addtocart(image)">Add to Cart</button>
+        
+            </div>
+        
+        </div>
+        
+        <div class="necklaceImageContainer">
+        
+            <div class="necklaceImages" *ngFor="let image of ringImages; let i = index">
+                <img 
+                img [src]="image.imageSrc" [alt]="image.imageAlt" class="partnersImages">
+                <p class="titles">{{image.name}}</p>
+                <p>{{image.price |currency}}</p>
+        
+                <button type="button" (click)="addtocart(image)" class="addToCart">Add to Cart</button>
+        
+            </div>
+        
+        </div>
+        
+    </div>
+</div>
+
